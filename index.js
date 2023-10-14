@@ -29,8 +29,8 @@ app.post('/send_email', (req, res) => {
     const { name, email, phone, message, from, to } = req.body;
 
     const mailOptions = {
-        from: 'kishang5500@gmail.com',
-        to: 'kishang5500@gmail.com', // Receiver's email address
+        from: 'ap1663392@gmail.com',
+        to: 'ap1663392@gmail.com', // Receiver's email address
         subject: 'Contact Form Submission',
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nPhone:${phone}\nfrom:${from}\nto:${to}`,
     };
