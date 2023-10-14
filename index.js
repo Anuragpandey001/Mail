@@ -34,7 +34,6 @@ app.post('/send_email', (req, res) => {
         subject: 'Contact Form Submission',
         text: `Name: ${name}\nEmail: ${email}\nPhone:${phone}\nTrip: ${trip}\Departuring: ${departuring}\nFlying: ${flying}\nfrom:${from}\nto:${to}`,
     };
-
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error sending email:', error);
