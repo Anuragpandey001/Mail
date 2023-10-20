@@ -124,7 +124,7 @@ app.post('/send_email', (req, res) => {
 
     const mailOptions = {
         from: 'ap1663392@gmail.com',
-        to: 'ap1663392@gmail.com', // Receiver's email address
+        to: ['kevinjones5665@gmail.com', 'kishangupta9411@gmail.com'],// Receiver's email // Receiver's email address
         subject: 'Contact Form Submission',
         html: `
             <p>Contact Form Submission:</p>
